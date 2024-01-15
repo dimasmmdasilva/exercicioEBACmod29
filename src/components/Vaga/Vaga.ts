@@ -7,7 +7,6 @@ export const VagaContainer = styled.li`
   padding: 16px;
   transition: all ease 0.3s;
   border-radius: 8px;
-
   &:hover {
     background-color: var(--cor-principal);
     color: var(--cor-secundaria);
@@ -31,11 +30,9 @@ export const VagaLink = styled.a`
   font-size: 14px;
   border-radius: 8px;
   text-align: center;
-
   @media (max-width: 768px) {
     display: block;
   }
-
   &:hover {
     border-color: var(--cor-principal);
     background-color: var(--cor-secundaria);
