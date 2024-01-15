@@ -1,19 +1,21 @@
-import Header from './components/Cabecalho'
-import Hero from './components/Hero'
-import ListaVagas from './containers/ListaVagas'
+import React from 'react';
+import Header from './components/Cabecalho';
+import Hero from './components/Hero';
+import ListaVagas from './containers/ListaVagas';
+import { Container } from './styles'
+import { GlobalStyle } from './styles';
 
-import './global.css'
-
-function App() {
+const App: React.FC = () => {
   return (
     <>
+      <GlobalStyle />
       <Header />
       <Hero />
-      <div className="container">
+      <Container>
         <ListaVagas />
-      </div>
+      </Container>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

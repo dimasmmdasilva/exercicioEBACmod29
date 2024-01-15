@@ -1,31 +1,28 @@
-import { FormEvent, useState } from 'react'
-
-import styles from './FormVagas.module.css'
-
-type Props = {
-  aoPesquisar: (termo: string) => void
-}
+/* eslint-disable react/react-in-jsx-scope */
+import { FormEvent, useState } from "react";
+import { Props, StyledButton, StyledForm, StyledInput } from "./FormVagas";
 
 const FormVagas = ({ aoPesquisar }: Props) => {
-  const [termo, setTermo] = useState<string>('')
+  const [termo, setTermo] = useState<string>('');
 
   const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    aoPesquisar(termo.toLocaleLowerCase())
-  }
+    e.preventDefault();
+    aoPesquisar(termo.toLocaleLowerCase());
+  };
 
   return (
-    <form className={styles.form} onSubmit={aoEnviarForm}>
-      <input
-        className={styles.campo}
-        placeholder="Front-end, fullstack, node, design"
+    <form onSubmit={aoEnviarForm}>
+    <StyledForm>
+      <StyledInput>
+      <input placeholder="Front-end, fullstack, node, design"
         onChange={(e) => setTermo(e.target.value)}
-        type="search"
-      />
-      <button className={styles.btnPesquisar} type="submit">
-        Pesquisar
-      </button>
+        type="search" />
+      </StyledInput>
+      <StyledButton>
+        <button type="submit">Pesquisar</button></StyledButton>
+    </StyledForm>
     </form>
-  )
-}
-export default FormVagas
+  );
+};
+
+export default FormVagas;
