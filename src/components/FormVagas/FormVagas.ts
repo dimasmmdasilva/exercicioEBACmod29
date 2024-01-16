@@ -17,6 +17,8 @@ export const StyledForm = styled.form`
 export const StyledInput = styled.input`
   padding: 0 16px;
   outline-color: ${corPrincipal};
+  border: none;
+  height: 40px;
 `;
 
 export const StyledButton = styled.button`
@@ -26,6 +28,10 @@ export const StyledButton = styled.button`
   padding: 0 16px;
   font-size: 18px;
   color: ${corSecundaria};
-  margin-left: 8px;
   cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken(${corPrincipal}, 10%);
+  }
 `;

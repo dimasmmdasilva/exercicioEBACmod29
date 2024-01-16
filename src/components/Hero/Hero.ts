@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { corPrincipal } from "../../styles";
 
 export const FormHero = styled.div`
   height: 360px;
@@ -14,7 +15,7 @@ export const FormHero = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--cor-principal);
+    background-color: ${corPrincipal};
     content: '';
     opacity: 0.7;
   }

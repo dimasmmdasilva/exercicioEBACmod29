@@ -1,6 +1,5 @@
-import React from "react";
-import { FormEvent, useState } from "react";
-import { Props, StyledButton, StyledForm, StyledInput } from "./FormVagas";
+import React, { FormEvent, useState } from "react";
+import { Props, StyledForm, StyledInput, StyledButton } from "./FormVagas";
 
 const FormVagas = ({ aoPesquisar }: Props) => {
   const [termo, setTermo] = useState<string>('');
@@ -11,17 +10,14 @@ const FormVagas = ({ aoPesquisar }: Props) => {
   };
 
   return (
-    <form onSubmit={aoEnviarForm}>
-    <StyledForm>
-      <StyledInput>
-      <input placeholder="Front-end, fullstack, node, design"
+    <StyledForm onSubmit={aoEnviarForm}>
+      <StyledInput
+        placeholder="Front-end, fullstack, node, design"
         onChange={(e) => setTermo(e.target.value)}
-        type="search" />
-      </StyledInput>
-      <StyledButton>
-        <button type="submit">Pesquisar</button></StyledButton>
+        type="search"
+      />
+      <StyledButton type="submit">Pesquisar</StyledButton>
     </StyledForm>
-    </form>
   );
 };
 
